@@ -1,4 +1,4 @@
-# artifactory_python [![Build Status](https://travis-ci.org/gugahoi/artifactory_python.svg?branch=master)](https://travis-ci.org/gugahoi/artifactory_python)
+# artifactory-lib [![Build Status](https://travis-ci.org/MYOB-Technology/artifactory-lib.svg?branch=master)](https://travis-ci.org/MYOB-Technology/artifactory-lib)
 
 Python library to interact with Artifactory's API
 
