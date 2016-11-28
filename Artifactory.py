@@ -79,11 +79,14 @@ class Artifactory(object):
     def get_user(self, username):
         return self.get('/security/users/%s' % username)
 
-    def create_user(self, username):
-        return self.put('/security/users/%s' % username.lower(), {
-            'email': '%s@email.com' % username,
-            'password': 'password'
-        })
+    def create_user(self, username, data):
+        if 'email' not in data:
+            return False
+
+        if 'password' not in data:
+            return False
+
+        return self.put('/security/users/%s' % username.lower(), data)
 
     def delete_user(self, username):
         return self.delete('/security/users/%s' % username.lower())

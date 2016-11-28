@@ -29,11 +29,24 @@ class ArtifactoryTestCase(unittest.TestCase):
 
     def test_create_user(self):
         with patch.object(Artifactory, 'put') as mock:
-            self.artifactory.create_user('tim')
+            self.artifactory.create_user('tim', {
+                'password': 'password',
+                'email': 'tim@email.com'
+            })
+
             mock.assert_called_once_with('/security/users/tim', {
                 'password': 'password',
                 'email': 'tim@email.com'
             })
+
+    def test_create_user_failure(self):
+        self.assertFalse(
+            self.artifactory.create_user('tim', {
+                'email': 'tim@email.com'
+            }),
+            msg='Expected no create_user to return early'
+        )
+
 
     def test_delete_user(self):
         with patch.object(Artifactory, 'delete') as mock:
