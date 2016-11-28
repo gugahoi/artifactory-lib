@@ -21,9 +21,9 @@ setup(
 
     description='Python library for interacting with Artifactory API',
     long_description=read_md('README.md'),
-    url='https://github.com/gugahoi/artifactory_python',
+    url='https://github.com/MYOB-Technology/artifactory-lib',
     author='Gustavo Hoirisch',
-    author_email='gugahoi@gmail.com',
+    author_email='gustavo.hoirisch@myob.com',
     license='MIT',
 
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
