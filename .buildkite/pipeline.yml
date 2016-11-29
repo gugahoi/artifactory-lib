@@ -7,10 +7,6 @@ steps:
       BUILDKITE_DOCKER: true
 
   - label: 'Deploying to PyPi'
-    command: |-
-      echo "[server-login]" > ~/.pypirc
-      echo "username:" ${PYPI_USER} >> ~/.pypirc
-      echo "password:" ${PYPI_PASSWORD} >> ~/.pypirc
-      cat ~/.pypirc
+    command: ./deploy.sh
     agents:
       queue: 'voyager'
