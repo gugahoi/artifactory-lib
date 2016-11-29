@@ -17,4 +17,4 @@ docker run \
     -v ~/.pypirc:/root/.pypirc \
     -w /root/app \
     python:2.7 \
-    python setup.py sdist bdist upload
+    python setup.py sdist upload
