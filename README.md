@@ -17,7 +17,10 @@ from Artifactory import Artifactory
 artifactory = Artifactory('user', '1234')
 
 # create a new user
-artifactory.create_user('tim')
+artifactory.create_user('tim', {
+    email: 'myemail@example.com',
+    password: 'somepassword1234'
+})
 
 # get list of users from artifactory
 users = artifactory.get_users()
