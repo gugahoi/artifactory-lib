@@ -5,3 +5,13 @@ steps:
       queue: 'voyager'
     env:
       BUILDKITE_DOCKER: true
+
+  - label: 'Deploying to PyPi'
+    command: |-
+      echo "[server-login]" > ~/.pypirc
+      echo "username:" ${PYPI_USER} >> ~/.pypirc
+      echo "password:" ${PYPI_PASSWORD} >> ~/.pypirc
+    agents:
+      queue: 'voyager'
+    env:
+      BUILDKITE_DOCKER: true
