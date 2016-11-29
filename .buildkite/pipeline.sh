@@ -16,7 +16,7 @@ EOF
 if [[ -n "${BUILDKITE_TAG:-}" ]]; then
   cat << EOF
   - label: 'Deploying to PyPi'
-    command: ./deploy.sh
+    command: ./.buildkite/deploy.sh
     agents:
       queue: 'voyager'
 EOF
