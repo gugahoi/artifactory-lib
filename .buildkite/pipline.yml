@@ -1,0 +1,7 @@
+steps:
+  - label: 'Testing :python:'
+    command: 'python -m unittest discover'
+    agents:
+      queue: 'voyager'
+    env:
+      BUILDKITE_DOCKER: true
