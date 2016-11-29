@@ -1,4 +1,6 @@
-# artifactory-lib [![Build status](https://badge.buildkite.com/23ba0baa4123598b33809cdce05c9a4dd46a5f4d83534e7b7a.svg)](https://buildkite.com/myob/artifactory-lib)
+# artifactory-lib 
+[![PyPI version](https://badge.fury.io/py/artifactory-lib.svg)](https://badge.fury.io/py/artifactory-lib)
+[![Build status](https://badge.buildkite.com/23ba0baa4123598b33809cdce05c9a4dd46a5f4d83534e7b7a.svg)](https://buildkite.com/myob/artifactory-lib)
 
 
 Python library to interact with Artifactory's API
